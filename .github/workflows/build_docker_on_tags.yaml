@@ -7,7 +7,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: w6d-io/azur-cli-tools
+  IMAGE_NAME: w6d-io/azure-cli-tools
 
 jobs:
   release:
