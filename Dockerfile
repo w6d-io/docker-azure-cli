@@ -1,5 +1,5 @@
 # Dockerfile : image CI pour publier une Azure Function (Core Tools v4 + Azure CLI)
-FROM debian:12-slim
+FROM debian:13-slim
 
 ARG DEBIAN_VERSION=12
 ENV DEBIAN_FRONTEND=noninteractive
