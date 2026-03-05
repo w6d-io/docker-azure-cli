@@ -30,9 +30,18 @@ RUN set -eux; \
       azure-cli \
       libicu-dev; \
     \
+    # kubectl + kubelogin (pour AKS)
+    az aks install-cli; \
+    \
+    # Helm 3
+    curl -fsSL https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash; \
+    \
     # Vérifs rapides (garde en cache les couches si OK)
     func --version; \
     az version; \
+    kubectl version --client; \
+    kubelogin --version; \
+    helm version; \
     \
     # Nettoyage
     apt-get clean; \
